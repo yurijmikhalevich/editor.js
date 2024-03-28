@@ -10,7 +10,9 @@ import ToolsFactory from '../tools/factory';
 import InlineTool from '../tools/inline';
 import BlockTool from '../tools/block';
 import BlockTune from '../tools/tune';
+import MoveDownTune from '../block-tunes/block-tune-move-down';
 import DeleteTune from '../block-tunes/block-tune-delete';
+import MoveUpTune from '../block-tunes/block-tune-move-up';
 import ToolsCollection from '../tools/collection';
 
 /**
@@ -195,8 +197,16 @@ export default class Tools extends Module {
         class: Stub,
         isInternal: true,
       },
+      moveUp: {
+        class: MoveUpTune,
+        isInternal: true,
+      },
       delete: {
         class: DeleteTune,
+        isInternal: true,
+      },
+      moveDown: {
+        class: MoveDownTune,
         isInternal: true,
       },
     };
